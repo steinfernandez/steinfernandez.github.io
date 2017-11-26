@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to Catello!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="loadingcat hide">
+  <p id="pleasewait">Talking to database cats. Please wait...</p>
+  </div>
+    <div class="catwrapper">
+      <div class="container-fluid" id="login-page">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-header">
+              <h1 id="titletext" class="text-center">
+						Welcome to Catello!
+					</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+
+            <button type="button" class="btn btn-primary btn-block btn-lg" id="loginbutton" data-toggle="modal" data-target="#loginModal">
+              Log In
+            </button>
+          </div>
+          <div class="col-md-6">
+
+            <button type="button" class="btn btn-primary btn-block btn-lg" id="signupbutton" data-toggle="modal" data-target="#signupModal">
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <div class="row">
+            <p id="loginpagedescription">
+              Catello is a Trello clone made as an interview assignment for indee.tv. Designed and developed by Stein Astor Fernandez in under 48 hours.
+            </p>
+        </div>
+        <div id="loginModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form role="form">
+                      <div class="form-group">
+
+                        <label for="loginUsername">
+                          Username
+                        </label>
+                        <input type="text" class="form-control" id="loginUsername" />
+                      </div>
+                      <div class="form-group">
+
+                        <label for="loginPassword">
+                          Password
+                        </label>
+                        <input type="password" class="form-control" id="loginPassword" />
+                      </div>
+                      <button id="submitLogin" type="submit" class="btn btn-default">
+                        Submit
+                      </button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div id="signupModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Sign Up</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form role="form">
+                      <div class="form-group">
+
+                        <label for="signupUsername">
+                          Username
+                        </label>
+                        <input type="text" class="form-control" id="signupUsername" />
+                      </div>
+                      <div class="form-group">
+
+                        <label for="signupPassword">
+                          Password
+                        </label>
+                        <input type="password" class="form-control" id="signupPassword" />
+                      </div>
+                      <button id="submitSignup" type="submit" class="btn btn-default">
+                        Submit
+                      </button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hide" id="board-page">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button> <span id="boardpagelogo" class="navbar-brand">Catello</span>
+			<span id="boardpagetext" class="navbar-brand">Developed by Stein Astor Fernandez.</span>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <button type="button" class="btn btn-info btn-sm hide" id="syncbutton">
+                Sync
+              </button>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="usernameDisplay">Username</span><strong class="caret"></strong></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a id="logoutButton" href="#">Log Out</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+        <div class="container-fluid" id="categoryWrapper">
+          <!-- <div class="categoryDiv">
+					<div class="categoryTitle">
+						Category Name
+					</div>
+					<div class="task">
+						<div class="task-title" contenteditable>
+						</div>
+						<div class="task-description" contenteditable>
+						</div>
+					</div>
+					<button type="button" class="btn btn-info btn-lg addTaskButton" >
+					Add Task
+					</button>
+				</div>
+				<button type="button" class="btn btn-info btn-lg" id="addCategoryButton">
+				Add Category
+				</button> -->
+        </div>
+      </div>
+      <div id="taskeditModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Edit Task</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="form-group">
+
+                      <label for="editTitle">
+                        Title
+                      </label>
+                      <input type="text" class="form-control" id="editTitle" />
+                    </div>
+                    <div class="form-group">
+
+                      <label for="editDescription">
+                        Description
+                      </label>
+                      <textarea rows="10" class="form-control" id="editDescription"></textarea>
+                    </div>
+                </form>
+				<div class="form-group">
+					<button class="btn btn-danger " id="taskdeleteButton"> Delete Task </button> 
+				</div>
+                </div>
+				</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="categoryeditModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Edit Category</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <form role="form">
+                    <div class="form-group">
+
+                      <label for="editCategory">
+                        Category Name
+                      </label>
+                      <input type="text" class="form-control" id="editCategory" />
+                    </div>
+                </form>
+				<div class="form-group">
+					<button class="btn btn-danger " id="categorydeleteButton"> Delete Category </button> 
+				</div>
+                </div>
+				</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/md5.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>
